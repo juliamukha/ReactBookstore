@@ -1,0 +1,36 @@
+import { createContext, useState } from "react";
+
+interface ContextProps {
+    darkTheme: boolean;
+    toggleTheme: () => void;
+}
+
+export const ThemeContext = createContext<ContextProps>({
+    darkTheme: false,
+    toggleTheme: () => { },
+});
+
+interface Props {
+    children?: React.ReactNode;
+}
+
+const ThemeProvider: React.FC<Props> = ({ children }) => {
+    const [darkTheme, setDarkTheme] = useState(false);
+
+    const toggleThemeHandler = () => {
+        setDarkTheme((prevState) => !prevState);
+    };
+
+    return (
+        <ThemeContext.Provider
+            value={{
+                darkTheme: darkTheme,
+                toggleTheme: toggleThemeHandler,
+            }}
+        >
+            {children}
+        </ThemeContext.Provider>
+    );
+};
+
+export default ThemeProvider;

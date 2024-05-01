@@ -1,0 +1,29 @@
+@import "../../../sass/variables.module.scss";
+
+.header {
+    background-color: var(--background-theme-color);
+    width: 100%;
+    position: fixed;
+    z-index: 100;
+    top: 0;
+
+    &-container {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        height: $header-height;
+        border-bottom: 1px solid $border-color;
+    }
+
+    &-icons-holder {
+        display: flex;
+        align-items: center;
+
+    }
+
+    &__user-icon {
+        height: 100%;
+        margin: 0 $margin-level-6;
+        @include flex-center();
+    }
+}

@@ -1,0 +1,40 @@
+@import "../../../sass/variables.module.scss";
+
+.tabs {
+  margin-bottom: $margin-level-2;
+
+  &__nav {
+    display: flex;
+    border-bottom: 1px solid $border-color;
+    margin-top: $margin-level-1;
+    margin-bottom: $margin-level-2;
+  }
+
+  &__nav-link {
+    display: block;
+    padding: 0 $margin-level-3 $margin-level-5;
+    text-align: center;
+    @include text-regular();
+    color: var(--text-theme-color);
+
+    &.active {
+      border-bottom: 2px solid var(--text-theme-color);
+      cursor: default;
+    }
+
+    &:not(.active) {
+      color: $secondary-color;
+      cursor: pointer;
+    }
+
+    &:not(.active):hover {
+      color: $red-color;
+    }
+  }
+
+  &__content {
+    @include text-regular();
+    color: var(--text-theme-color);
+    min-height: $margin-level-1;
+  }
+}

@@ -1,0 +1,56 @@
+@import "../../sass/variables.module.scss";
+
+.card {
+  @include card-bg(20);
+
+  &__image-holder {
+    @include flex-center();
+    padding: $margin-level-4 15px;
+    margin-bottom: $margin-level-6;
+  }
+
+  &__image {
+    max-height: 250px;
+    width: auto;
+  }
+
+  &__title,
+  &__author {
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  &__title {
+    color: var(--text-theme-color);
+    cursor: pointer;
+    margin-bottom: $margin-level-8;
+    min-height: 60px;
+    @include headline-3();
+
+    &:hover {
+      color: $red-color;
+    }
+  }
+
+  &__author {
+    color: $secondary-color;
+    min-height: 45px;
+    margin-bottom: $margin-level-5;
+    @include text-regular;
+  }
+
+  &__price-holder {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    @include text-regular();
+  }
+
+  &__price {
+    @include headline-3();
+    color: var(--text-theme-color);
+  }
+}

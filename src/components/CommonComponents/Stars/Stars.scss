@@ -1,0 +1,20 @@
+@import "../../../sass/variables.module.scss";
+
+.card__stars {
+  .star-rate svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  .star-rate:not(.rated) svg {
+    color: $secondary-color;
+  }
+
+  .star-rate.rated svg {
+    color: $primary-color;
+  }
+
+  .star-rate.user-rated svg {
+    color: $red-color;
+  }
+}

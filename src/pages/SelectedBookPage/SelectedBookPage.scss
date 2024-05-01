@@ -1,0 +1,17 @@
+@import "../../sass/variables.module.scss";
+
+
+.icon-back_link {
+  margin-bottom: $margin-level-4;
+  padding: 0;
+}
+
+.share-icon {
+  margin-bottom: $margin-level-1;
+  display: flex;
+  gap: $margin-level-5;
+}
+
+.similar-card {
+  margin-top: $margin-level-1;
+}

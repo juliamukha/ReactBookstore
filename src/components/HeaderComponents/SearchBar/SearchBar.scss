@@ -1,0 +1,36 @@
+@import "../../../sass/variables.module.scss";
+
+.search {
+    max-width: 542px;
+    display: flex;
+    flex-basis: 100%;
+    align-items: center;
+    position: relative;
+
+    &-input-holder,
+    &-input {
+        width: 100%;
+    }
+
+    &-input {
+        padding-right: 50px;
+        padding-left: 40px;
+    }
+
+    .search__icon-submit,
+    .search__icon-close {
+        position: absolute;
+    }
+
+    .search__icon-close {
+        left: 15px;
+
+        svg {
+            width: 14px;
+        }
+    }
+
+    .search__icon-submit {
+        right: 15px;
+    }
+}

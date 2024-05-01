@@ -1,0 +1,15 @@
+@import "../../../sass/variables.module.scss";
+
+.menu-item {
+    &__link {
+        @include flex-center();
+        height: 80px;
+        border-bottom: 1px solid $border-color;
+        @include text-bold();
+        color: var(--text-theme-color);
+
+        &_hover {
+            color: $secondary-color;
+        }
+    }
+}

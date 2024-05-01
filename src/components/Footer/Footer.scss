@@ -1,0 +1,14 @@
+@import "../../sass/variables.module.scss";
+
+.footer {
+  border-top: 1px solid $border-color;
+  @include text-regular();
+  color: $secondary-color;
+
+  &-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 95px;
+  }
+}

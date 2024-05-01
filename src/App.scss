@@ -1,0 +1,72 @@
+@import "./sass/variables.module.scss";
+
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
+    outline: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+main,
+section {
+    display: block;
+}
+
+html,
+body {
+    font-family: $font-family-domine;
+    font-size: $font-size;
+}
+
+#root {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100vh;
+    background-color: var(--background-theme-color);
+}
+
+.container {
+    max-width: 1200px;
+    padding: 0 $margin-level-3;
+    margin: 0 auto;
+}
+
+.main {
+    margin-top: $header-height;
+    padding: $margin-level-1 0;
+}
+
+.bold {
+    font-weight: 600;
+}
+
+.center {
+    text-align: center;
+}
+
+.link {
+    color: var(--text-theme-color);
+    font-weight: 600;
+    cursor: pointer;
+
+    &:hover {
+        color: $red-color;
+        text-decoration: underline;
+    }
+}
+
+.icon-link {
+    @include icon-button();
+    display: inline-block;
+    padding: 0 $margin-level-6;
+}

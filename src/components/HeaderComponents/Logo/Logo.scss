@@ -1,0 +1,11 @@
+@import "../../../sass/variables.module.scss";
+
+.header-logo {
+    min-width: 185px;
+
+    &-link {
+        height: 28px;
+        color: var(--text-theme-color);
+        cursor: pointer;
+    }
+}

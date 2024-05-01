@@ -1,0 +1,11 @@
+@use 'variables.module' as *;
+
+html:not([data-theme="dark"]) {
+    --background-theme-color: #{$background-white-color};
+    --text-theme-color: #{$primary-color};
+}
+
+html[data-theme="dark"] {
+    --background-theme-color: #{$primary-color};
+    --text-theme-color: #{$background-white-color};
+}

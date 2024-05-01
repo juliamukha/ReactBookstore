@@ -1,0 +1,12 @@
+@import "../../sass/variables.module.scss";
+
+
+.cards-search-holder {
+  .small-card-top {
+    justify-content: start;
+  }
+
+  .small-card-top-left {
+    order: 2;
+  }
+}

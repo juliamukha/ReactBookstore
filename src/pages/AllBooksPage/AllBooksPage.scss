@@ -1,0 +1,9 @@
+@import "../../sass/variables.module.scss";
+
+.cards-holder {
+  display: grid;
+  justify-content: space-between;
+  grid-gap: $margin-level-2 $margin-level-4;
+  grid-template-columns: repeat(3, 1fr);
+  margin-bottom: $margin-level-1;
+}

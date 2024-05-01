@@ -1,0 +1,32 @@
+@import "../../sass/variables.module.scss";
+
+
+
+.subscription {
+    padding: 56px 64px;
+    background-color: $purple-color;
+
+    &__title {
+        @include headline-2();
+        text-transform: uppercase;
+        margin-bottom: 8px;
+    }
+
+    &__text {
+        @include text-regular();
+        color: $secondary-color;
+        margin-bottom: $margin-level-4;
+    }
+
+    &__form {
+        display: flex;
+    }
+
+    &__input-holder {
+        flex: auto;
+    }
+
+    &__input {
+        width: 100%;
+    }
+}

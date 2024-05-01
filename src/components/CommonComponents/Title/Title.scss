@@ -1,0 +1,7 @@
+@import "../../../sass/variables.module.scss";
+
+.title {
+  margin-bottom: $margin-level-2;
+  @include headline-1();
+  text-transform: uppercase;
+}

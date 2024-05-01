@@ -1,0 +1,53 @@
+@import "../../../sass/variables.module.scss";
+
+
+.similar-card {
+  &__title-holder {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: $margin-level-2;
+  }
+
+  &__title {
+    @include headline-2();
+  }
+
+  &__arrow-holder {
+    display: flex;
+    gap: $margin-level-7;
+  }
+
+  .similar-cards {
+    display: grid;
+    justify-content: space-between;
+    grid-gap: $margin-level-4;
+    grid-template-columns: repeat(3, calc(100%/3 - $margin-level-4 / 3));
+    grid-auto-flow: column;
+    overflow: hidden;
+
+    .card-1 {
+      order: 1;
+    }
+
+    .card-2 {
+      order: 2;
+    }
+
+    .card-3 {
+      order: 3;
+    }
+
+    .card-4 {
+      order: 4;
+    }
+
+    .card-5 {
+      order: 5;
+    }
+
+    .card-6 {
+      order: 6;
+    }
+  }
+}

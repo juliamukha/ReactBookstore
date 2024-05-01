@@ -1,0 +1,14 @@
+@import "../../../sass/variables.module.scss";
+
+.breadcrumbs {
+  margin-bottom: $margin-level-3;
+
+  &__item {
+    color: var(--text-theme-color);
+    @include text-regular();
+
+    &:hover {
+      color: $primary2-color;
+    }
+  }
+}
