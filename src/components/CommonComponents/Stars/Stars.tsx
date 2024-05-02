@@ -2,6 +2,9 @@ import './Stars.scss';
 import ButtonIcon from '../ButtonIcon/ButtonIcon';
 import { useState } from 'react';
 import { faStar } from '@fortawesome/free-solid-svg-icons';
+import { useDispatch, useSelector } from 'react-redux';
+import { useEffect } from 'react';
+import { fetchSelectedCard } from '../../../redux/slice/cardStateSlice';
 
 
 
@@ -9,7 +12,8 @@ import { faStar } from '@fortawesome/free-solid-svg-icons';
 export default function Stars({ rating }: { rating: number }) {
   const [userRating, setUserRating] = useState(0);
   const [hoverRating, setHoverRating] = useState(0);
-  rating = rating ? Number(rating) : Math.floor(Math.random() * 5) + 1
+
+
   return (
     <div className='card__stars'>
       {[...Array(5)].map((star, index) => {

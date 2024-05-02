@@ -9,7 +9,6 @@ export default function Tabs({ book }: { book: ICard }) {
   const tabItems = ['Description', 'Author', 'Review'];
   const [activeTab, setActiveTab] = useState(0);
   function openTab(e: any) {
-    console.log(e.target.dataset.item);
     setActiveTab(e.target.dataset.item);
   }
 

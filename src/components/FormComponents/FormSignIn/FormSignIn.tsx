@@ -19,7 +19,6 @@ export default function FormSignIn({ sendAuthorizationState }: any) {
   function submitLogIn(e: any) {
     e.preventDefault();
     sendAuthorizationState();
-    console.log(logInData);
   }
 
   return (

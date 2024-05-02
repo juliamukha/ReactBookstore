@@ -5,8 +5,8 @@ import Stars from '../CommonComponents/Stars/Stars';
 
 
 
-
 export default function Card({ card, orderItem }: { card: ICards, orderItem?: number }) {
+
 
   return (
     <article className={`card ${orderItem ? 'card-' + orderItem : ''}`}>
@@ -18,7 +18,7 @@ export default function Card({ card, orderItem }: { card: ICards, orderItem?: nu
 
       <div className='card__price-holder'>
         <p className='card__price'>{card.price}</p>
-        <Stars rating={0}></Stars>
+        <Stars rating={5}></Stars>
       </div>
     </article>
   );

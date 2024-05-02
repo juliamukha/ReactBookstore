@@ -12,7 +12,6 @@ import { ICard } from '../../types/CardsInterface';
 
 
 export default function SelectedCard({ book }: { book: ICard }) {
-
   return (
 
     <section className='selected-card'>
@@ -46,7 +45,7 @@ export default function SelectedCard({ book }: { book: ICard }) {
           <div className='flex-card m-b-8'>
             <p className='flex-card_left'>Format</p>
             <p className='flex-card_right'>Paper book
-              {Object.keys(book).slice(-1) && <span>/ ebook ({Object.keys(book).slice(-1)})</span>}</p>
+              {book.pdf && <span>/ ebook (pdf)</span>}</p>
           </div>
           {(book.subtitle || book.pages) &&
             <details className='selected-card__details'>
@@ -68,9 +67,11 @@ export default function SelectedCard({ book }: { book: ICard }) {
             </details>
           }
           <Button isDisabled={false} typeButton='addToCart-button'>Add to Cart</Button>
-          <div className="center">
-            <Link to={Object.values(book.pdf)[0]} className='link'>Preview book</Link>
-          </div>
+          {book.pdf &&
+            <div className="center">
+              <Link to={Object.values(book.pdf)[0]} className='link'>Preview book</Link>
+            </div>
+          }
         </div>
       </div>
       <Tabs book={book}></Tabs>

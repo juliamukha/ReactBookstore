@@ -22,7 +22,7 @@
     display: grid;
     justify-content: space-between;
     grid-gap: $margin-level-4;
-    grid-template-columns: repeat(3, calc(100%/3 - $margin-level-4 / 3));
+    grid-template-columns: repeat(3, calc(100%/3 - $margin-level-4 *2 / 3));
     grid-auto-flow: column;
     overflow: hidden;
 
